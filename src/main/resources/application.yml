@@ -13,3 +13,4 @@ spring:
       server:
         git:
           uri: https://github.com/vanddang/oksusu-config-server
+          search-paths: config
