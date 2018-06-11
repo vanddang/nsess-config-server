@@ -3,4 +3,6 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/vanddang/oksusu-config-server.git
+          uri: https://github.com/vanddang/oksusu-config-server
+          #username: vanddang@gmail.com
+          #password: tkfkdgo83#
