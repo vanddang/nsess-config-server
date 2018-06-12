@@ -1,1 +1,2 @@
-test.data: real 안녕하세요.
+sample:
+  data: real 안녕하세요.
