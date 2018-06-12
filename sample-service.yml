@@ -34,4 +34,4 @@ sample: stg 안녕하세요.
 
 spring:
   profiles: real
-sample: real 안녕하세요.  
+sample: real 안녕하세요.???  
