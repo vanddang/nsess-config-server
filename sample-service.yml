@@ -1,0 +1,18 @@
+spring:
+  profiles: dev
+sample: dev 안녕하세요.
+
+
+---
+
+  
+spring:
+  profiles: stg
+sample: stg 안녕하세요.
+
+
+---
+
+spring:
+  profiles: real
+sample: real 안녕하세요.  
