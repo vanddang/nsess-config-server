@@ -35,9 +35,9 @@ eureka:
     
     
 sample:
-  data:  local server config data 22
-  data2: sample data
+  data:  local server config data
+  data2: sample data 입니다.
   
 github:
-  cloneBaseDir: /tmp
-  token: f4d24eed3909ad8766e29fd2500e80cb33d153a8  
+  cloneBaseDir: /tmp1
+  token: f4d24eed3909ad8766e29fd2500e80cb33d153a82  
