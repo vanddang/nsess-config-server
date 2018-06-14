@@ -1,0 +1,37 @@
+spring:
+  profiles: stg
+sample: stg 안녕하세요.
+
+datasource:
+  url: jdbc:oracle:thin:@localhost:1521:xe
+  username: scott
+  password: tiger
+  driver-class-name: oracle.jdbc.driver.OracleDriver
+  dbcp2:
+    initial-size: 7
+    max-total: 20
+    pool-prepared-statements: true
+      
+hystrix:
+  command:
+    default:    # command key. use 'default' for global setting.
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 1000   # default 1,000ms
+      circuitBreaker:
+        requestVolumeThreshold: 2   # Minimum number of request to calculate circuit breaker's health. default 20
+        errorThresholdPercentage: 100 # Error percentage to open circuit. default 50
+    service1: # sample service name
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 1000   # default 1,000ms
+      circuitBreaker:
+        requestVolumeThreshold: 8   # Minimum number of request to calculate circuit breaker's health. default 20
+        errorThresholdPercentage: 100 # Error percentage to open circuit. default 50
+
+eureka:
+  client:
+    register-with-eureka: false
+    fetch-registry: false
