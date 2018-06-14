@@ -35,7 +35,7 @@ eureka:
     
     
 sample:
-  data:  local server config data
+  data:  local server config data 22
   
 github:
   cloneBaseDir: /tmp
