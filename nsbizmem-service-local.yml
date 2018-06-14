@@ -1,13 +1,13 @@
 spring:
-  datasource:
-    url: jdbc:oracle:thin:@localhost:1521:xe
-    username: scott
-    password: tiger
-    driver-class-name: oracle.jdbc.driver.OracleDriver
-    dbcp2:
-      initial-size: 7
-      max-total: 20
-      pool-prepared-statements: true
+#  datasource:
+#    url: jdbc:oracle:thin:@localhost:1521:xe
+#    username: scott
+    #password: tiger
+    #driver-class-name: oracle.jdbc.driver.OracleDriver
+    #dbcp2:
+      #initial-size: 7
+      #max-total: 20
+      #pool-prepared-statements: true
       
 hystrix:
   command:
