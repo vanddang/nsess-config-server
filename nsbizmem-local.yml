@@ -24,11 +24,12 @@ hystrix:
         requestVolumeThreshold: 10   # Minimum number of request to calculate circuit breaker's health. default 20
         errorThresholdPercentage: 100 # Error percentage to open circuit. default 50
 
-product:
+nsbizmemservice:
   ribbon:
     eureka:
       enabled: false
-    listOfServers: google.com
+    listOfServers: localhost:8080/nsbizmem-nsess-web
+    ServerListRefreshInterval: 15000
     MaxAutoRetries: 0  # default 0
     MaxAutoRetriesNextServer: 1 # default 1
                 
