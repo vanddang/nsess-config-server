@@ -1,4 +1,8 @@
 spring:
+  cloud:
+    loadbalancer:
+      retry:
+        enabled: true # default true
   datasource:
     url: jdbc:oracle:thin:@localhost:1521:xe
     username: scott
@@ -17,25 +21,25 @@ hystrix:
           thread:
             timeoutInMilliseconds: 1000   # default 1,000ms
       circuitBreaker:
-        requestVolumeThreshold: 2   # Minimum number of request to calculate circuit breaker's health. default 20
-        errorThresholdPercentage: 100 # Error percentage to open circuit. default 50
-    service1: # sample service name
-      execution:
-        isolation:
-          thread:
-            timeoutInMilliseconds: 1000   # default 1,000ms
-      circuitBreaker:
-        requestVolumeThreshold: 8   # Minimum number of request to calculate circuit breaker's health. default 20
+        requestVolumeThreshold: 10   # Minimum number of request to calculate circuit breaker's health. default 20
         errorThresholdPercentage: 100 # Error percentage to open circuit. default 50
 
 nsbizmemservice:
   ribbon:
     eureka:
       enabled: false
-    listOfServers: localhost:8080,localhost:8081
+    listOfServers: localhost:8080
     MaxAutoRetries: 0  # default 0
     MaxAutoRetriesNextServer: 1 # default 1
-        
+
+nsbizmemservice2:
+  ribbon:
+    eureka:
+      enabled: false
+    listOfServers: localhost:8081
+    MaxAutoRetries: 0  # default 0
+    MaxAutoRetriesNextServer: 1 # default 1
+                
 eureka:
   client:
     register-with-eureka: false
