@@ -3,6 +3,10 @@ spring:
     loadbalancer:
       retry:
         enabled: true # default true
+    discovery:
+        enabled: true
+        serviceId: nsbizmemservice
+                
   datasource:
     url: jdbc:oracle:thin:@localhost:1521:xe
     username: scott
