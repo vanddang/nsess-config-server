@@ -24,7 +24,7 @@ hystrix:
         requestVolumeThreshold: 10   # Minimum number of request to calculate circuit breaker's health. default 20
         errorThresholdPercentage: 100 # Error percentage to open circuit. default 50
 
-cslb-server2:
+nsbizmem-server:
   ribbon:
     eureka:
       enabled: false
