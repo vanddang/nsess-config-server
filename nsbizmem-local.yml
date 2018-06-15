@@ -28,10 +28,8 @@ nsbizmemservice:
   ribbon:
     eureka:
       enabled: false
-    listOfServers: localhost:8888
+    listOfServers: 127.0.0.1:8080
     ServerListRefreshInterval: 15000
-    MaxAutoRetries: 0  # default 0
-    MaxAutoRetriesNextServer: 1 # default 1
                 
 eureka:
   client:
