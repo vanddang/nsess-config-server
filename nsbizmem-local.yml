@@ -3,10 +3,6 @@ spring:
     loadbalancer:
       retry:
         enabled: true # default true
-    #discovery:
-        #enabled: true
-        #serviceId: nsbizmemservice
-                
   datasource:
     url: jdbc:oracle:thin:@localhost:1521:xe
     username: scott
@@ -28,19 +24,11 @@ hystrix:
         requestVolumeThreshold: 10   # Minimum number of request to calculate circuit breaker's health. default 20
         errorThresholdPercentage: 100 # Error percentage to open circuit. default 50
 
-nsbizmemservice:
+product:
   ribbon:
     eureka:
       enabled: false
     listOfServers: google.com
-    MaxAutoRetries: 0  # default 0
-    MaxAutoRetriesNextServer: 1 # default 1
-
-nsbizmemservice2:
-  ribbon:
-    eureka:
-      enabled: false
-    listOfServers: naver.com
     MaxAutoRetries: 0  # default 0
     MaxAutoRetriesNextServer: 1 # default 1
                 
