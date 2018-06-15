@@ -3,9 +3,9 @@ spring:
     loadbalancer:
       retry:
         enabled: true # default true
-    discovery:
-        enabled: true
-        serviceId: nsbizmemservice
+    #discovery:
+        #enabled: true
+        #serviceId: nsbizmemservice
                 
   datasource:
     url: jdbc:oracle:thin:@localhost:1521:xe
@@ -32,7 +32,7 @@ nsbizmemservice:
   ribbon:
     eureka:
       enabled: false
-    listOfServers: localhost:8080
+    listOfServers: google.com
     MaxAutoRetries: 0  # default 0
     MaxAutoRetriesNextServer: 1 # default 1
 
@@ -40,7 +40,7 @@ nsbizmemservice2:
   ribbon:
     eureka:
       enabled: false
-    listOfServers: localhost:8081
+    listOfServers: naver.com
     MaxAutoRetries: 0  # default 0
     MaxAutoRetriesNextServer: 1 # default 1
                 
