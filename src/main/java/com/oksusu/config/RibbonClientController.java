@@ -9,4 +9,9 @@ public class RibbonClientController {
 	public String home() {
 		return "Okay!";
 	}
+	
+	@RequestMapping(value = "/test")
+	public String test() {
+		return "Okay Test";
+	}
 }
