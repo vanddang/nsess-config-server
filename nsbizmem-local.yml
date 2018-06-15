@@ -36,10 +36,10 @@ nsbizmemservice:
     MaxAutoRetries: 0  # default 0
     MaxAutoRetriesNextServer: 1 # default 1
         
-#eureka:
-#  client:
-#    register-with-eureka: false
-#    fetch-registry: false
+eureka:
+  client:
+    register-with-eureka: false
+    fetch-registry: false
     
     
 sample:
