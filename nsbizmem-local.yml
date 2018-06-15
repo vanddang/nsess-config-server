@@ -28,7 +28,7 @@ nsbizmemservice:
   ribbon:
     eureka:
       enabled: false
-    listOfServers: 127.0.0.1:8080
+    listOfServers: 127.0.0.1:8888
     ServerListRefreshInterval: 15000
                 
 eureka:
