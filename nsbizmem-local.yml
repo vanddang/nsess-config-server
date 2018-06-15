@@ -28,7 +28,7 @@ nsbizmemservice:
   ribbon:
     eureka:
       enabled: false
-    listOfServers: localhost:8080/nsbizmem-nsess-web
+    listOfServers: localhost:8888
     ServerListRefreshInterval: 15000
     MaxAutoRetries: 0  # default 0
     MaxAutoRetriesNextServer: 1 # default 1
