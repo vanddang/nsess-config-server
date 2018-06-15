@@ -1,8 +1,8 @@
 spring:
-  cloud:
-    loadbalancer:
-      retry:
-        enabled: true # default true
+#  cloud:
+#    loadbalancer:
+#      retry:
+#        enabled: true # default true
   datasource:
     url: jdbc:oracle:thin:@localhost:1521:xe
     username: scott
@@ -19,7 +19,7 @@ hystrix:
       execution:
         isolation:
           thread:
-            timeoutInMilliseconds: 1000   # default 1,000ms
+            timeoutInMilliseconds: 3000   # default 1,000ms
       circuitBreaker:
         requestVolumeThreshold: 10   # Minimum number of request to calculate circuit breaker's health. default 20
         errorThresholdPercentage: 100 # Error percentage to open circuit. default 50
