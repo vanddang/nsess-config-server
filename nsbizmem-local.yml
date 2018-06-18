@@ -16,7 +16,7 @@ spring:
 # Hystrix circuitBreaker
 hystrix:
   command:
-    nsbizmem-service:    # command key. use 'default' for global setting.
+    default:    # command key. use 'default' for global setting.
       execution:
         isolation:
           thread:
