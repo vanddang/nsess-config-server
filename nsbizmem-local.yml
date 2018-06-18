@@ -12,7 +12,8 @@ spring:
       initial-size: 7
       max-total: 20
       pool-prepared-statements: true
-      
+
+# Hystrix circuitBreaker
 hystrix:
   command:
     default:    # command key. use 'default' for global setting.
@@ -24,13 +25,15 @@ hystrix:
         requestVolumeThreshold: 10   # Minimum number of request to calculate circuit breaker's health. default 20
         errorThresholdPercentage: 100 # Error percentage to open circuit. default 50
 
+# Ribbon loadBalanced
 nsbizmem-server:
   ribbon:
     eureka:
       enabled: false
-    listOfServers: 127.0.0.1:8081
-    ServerListRefreshInterval: 15000
+    listOfServers: 127.0.0.1:8080
+    ServerListRefreshInterval: 10000
                 
+# Eureka 연결 제거
 eureka:
   client:
     register-with-eureka: false
