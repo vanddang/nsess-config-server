@@ -32,12 +32,6 @@ nsbizmem-server:
       enabled: false
     listOfServers: 127.0.0.1:8080
     ServerListRefreshInterval: 10000
-    ConnectTimeout : 1000
-  ReadTimeout : 1000 
-  MaxTotalHttpConnections : 500 
-  MaxConnectionsPerHost : 100
-      
-      
       
 
 sample:
