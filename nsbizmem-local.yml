@@ -20,19 +20,19 @@ hystrix:
       execution:
         isolation:
           thread:
-            timeoutInMilliseconds: 3000   # default 1,000ms
+            timeoutInMilliseconds: 30000   # default 1,000ms
       circuitBreaker:
         requestVolumeThreshold: 10   # Minimum number of request to calculate circuit breaker's health. default 20
         errorThresholdPercentage: 100 # Error percentage to open circuit. default 50
 
-# Ribbon loadBalanced
+
 nsbizmem-service:
   ribbon:
     eureka:
       enabled: false
     listOfServers: 127.0.0.1:8080
     ServerListRefreshInterval: 10000
-      
+
 
 sample:
   data:  local server config data
