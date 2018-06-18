@@ -13,29 +13,6 @@ spring:
       max-total: 20
       pool-prepared-statements: true
 
-# Hystrix circuitBreaker
-hystrix:
-  command:
-    default:    # command key. use 'default' for global setting.
-      execution:
-        isolation:
-          thread:
-            timeoutInMilliseconds: 5000   # default 1,000ms, Ribbon의 각 timeout보다 커야 기대하는대로 동작함
-      circuitBreaker:
-        requestVolumeThreshold: 10   # Minimum number of request to calculate circuit breaker's health. default 20
-        errorThresholdPercentage: 100 # Error percentage to open circuit. default 50
-
-
-nsbizmem-service:
-  ribbon:
-    eureka:
-      enabled: false
-    listOfServers: 127.0.0.1:8080
-    ServerListRefreshInterval: 10000
-    ReadTimeout: 3000
-    MaxTotalHttpConnections: 500
-    MaxConnectionsPerHost: 100
-
 sample:
   data:  local server config data
   data2: sample data 입니다.
