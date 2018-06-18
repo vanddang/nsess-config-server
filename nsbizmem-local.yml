@@ -34,10 +34,10 @@ nsbizmem-server:
     ServerListRefreshInterval: 10000
                 
 # Eureka 연결 제거
-eureka:
-  client:
-    register-with-eureka: false
-    fetch-registry: false
+#eureka:
+#  client:
+#    register-with-eureka: false
+#    fetch-registry: false
     
     
 sample:
