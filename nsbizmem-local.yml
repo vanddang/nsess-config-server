@@ -32,14 +32,14 @@ nsbizmem-server:
       enabled: false
     listOfServers: 127.0.0.1:8080
     ServerListRefreshInterval: 10000
-                
-# Eureka 연결 제거
-#eureka:
-#  client:
-#    register-with-eureka: false
-#    fetch-registry: false
-    
-    
+    ConnectTimeout : 1000
+  ReadTimeout : 1000 
+  MaxTotalHttpConnections : 500 
+  MaxConnectionsPerHost : 100
+      
+      
+      
+
 sample:
   data:  local server config data
   data2: sample data 입니다.
