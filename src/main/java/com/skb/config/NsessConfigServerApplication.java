@@ -1,4 +1,4 @@
-package com.oksusu.config;
+package com.skb.config;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -6,9 +6,9 @@ import org.springframework.cloud.config.server.EnableConfigServer;
 
 @SpringBootApplication
 @EnableConfigServer
-public class OksusuConfigServerApplication {
+public class NsessConfigServerApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(OksusuConfigServerApplication.class, args);
+		SpringApplication.run(NsessConfigServerApplication.class, args);
 	}
 }

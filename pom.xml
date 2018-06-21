@@ -3,13 +3,10 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>com.oksusu</groupId>
-	<artifactId>oksusu</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>war</packaging>
 
-	<name>oksusu-config-server</name>
-	<description>oksusu-gateway</description>
+	<name>nsess-config-server</name>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>
@@ -111,4 +108,6 @@
 	</pluginRepositories>
 
 
+	<artifactId>nsess-config-server</artifactId>
+	<description>nsess-config-server</description>
 </project>

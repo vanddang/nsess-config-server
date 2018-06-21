@@ -1,4 +1,4 @@
-package com.oksusu.config;
+package com.skb.config;
 
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
@@ -7,7 +7,7 @@ public class ServletInitializer extends SpringBootServletInitializer {
 
 	@Override
 	protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
-		return application.sources(OksusuConfigServerApplication.class);
+		return application.sources(NsessConfigServerApplication.class);
 	}
 
 }
