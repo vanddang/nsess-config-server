@@ -43,38 +43,29 @@ hystrix:
 nsbizmem-service:
   ribbon:
     NIWSServerListClassName: com.netflix.loadbalancer.ConfigurationBasedServerList
-    ConnectTimeout: 1000
     eureka:
       enabled: false
     listOfServers: 127.0.0.1:8080
     ServerListRefreshInterval: 10000
     ReadTimeout: 3000
-    MaxTotalHttpConnections: 500
-    MaxConnectionsPerHost: 100
 
 nsbizmem-service-dw:
   ribbon:
     NIWSServerListClassName: com.netflix.loadbalancer.ConfigurationBasedServerList
-    ConnectTimeout: 1000
     eureka:
       enabled: false
     listOfServers: 127.0.0.1:8080
     ServerListRefreshInterval: 10000
     ReadTimeout: 3000
-    MaxTotalHttpConnections: 500
-    MaxConnectionsPerHost: 100
     
 nsbizmem-service-certkey:
   ribbon:
     NIWSServerListClassName: com.netflix.loadbalancer.ConfigurationBasedServerList
-    ConnectTimeout: 1000
     eureka:
       enabled: false
     listOfServers: 127.0.0.1:8080
     ServerListRefreshInterval: 10000
     ReadTimeout: 3000
-    MaxTotalHttpConnections: 500
-    MaxConnectionsPerHost: 100
         
 zuul:
   ignoredPatterns: /actuator/**
