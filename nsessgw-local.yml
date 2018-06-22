@@ -1,3 +1,27 @@
+spring:
+  datasource:
+    url: jdbc:oracle:thin:@localhost:1521:xe
+    username: scott
+    password: tiger
+    driver-class-name: oracle.jdbc.driver.OracleDriver
+    dbcp2:
+      initial-size: 7
+      max-total: 20
+      pool-prepared-statements: true
+
+
+server:
+  port: 8083
+  additionalPorts: 8081,8082
+  #ssl 인증서
+  ssl-port: 8443
+  key-store: C:/Users/vanddang/bahn_keystore.jks
+  key-store-password: "!q2w3e4r"
+  key-password: "!q2w3e4r"
+  key-alias: bahn
+  trust-store: C:/Users/vanddang/bahn_keystore_ts.ts
+  trust-store-password: "!q2w3e4r"
+  
 management:
   endpoints:
     web:
