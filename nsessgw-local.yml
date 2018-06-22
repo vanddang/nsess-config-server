@@ -26,7 +26,7 @@ management:
   endpoints:
     web:
       exposure:
-        include: refresh, info, env, health, loggers, metrics
+        include: refresh, info, env, health, loggers, metrics, routes, filters
 
 # Hystrix circuitBreaker
 hystrix:
