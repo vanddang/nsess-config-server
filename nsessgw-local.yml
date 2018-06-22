@@ -77,6 +77,6 @@ nsbizmem-service-certkey:
     MaxConnectionsPerHost: 100
         
 zuul:
-  ignoredServices: /actuator/**
+  ignoredPatterns: /actuator/**
   routes:
       nsbizmem-service: /**
