@@ -35,7 +35,7 @@ hystrix:
       execution:
         isolation:
           thread:
-            timeoutInMilliseconds: 5000   # default 1,000ms, Ribbon의 각 timeout보다 커야 기대하는대로 동작함
+            timeoutInMilliseconds: 10000   # default 1,000ms, Ribbon의 각 timeout보다 커야 기대하는대로 동작함
       circuitBreaker:
         requestVolumeThreshold: 10   # Minimum number of request to calculate circuit breaker's health. default 20
         errorThresholdPercentage: 100 # Error percentage to open circuit. default 50
