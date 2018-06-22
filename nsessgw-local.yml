@@ -76,6 +76,6 @@ nsbizmem-service-certkey:
     MaxTotalHttpConnections: 500
     MaxConnectionsPerHost: 100
         
-#zuul:
-#  routes:
-#      nsbizmem-service: /**
+zuul:
+  routes:
+      nsbizmem-service: /**
