@@ -71,6 +71,12 @@ nsbizmem-service-certkey:
     ReadTimeout: 5000
         
 zuul:
+  ribbon-isolation-strategy: THREAD
   ignoredPatterns: /actuator/**
   routes:
-      nsbizmem-service: /**
+      nsbizmem-service: 
+        path: /**
+        serviceId: nsbizmem-service
+        strip-prefix: false
+      nsbizmem-service-dw: /**
+      nsbizmem-service-certkey: /**
