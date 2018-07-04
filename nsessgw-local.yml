@@ -23,4 +23,4 @@ server:
   trust-store-password: "!q2w3e4r"
   
 reload:
-  flag: 1
+  flag: 0
