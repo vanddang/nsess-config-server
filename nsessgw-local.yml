@@ -22,5 +22,5 @@ server:
   trust-store: C:/Users/vanddang/bahn_keystore_ts.ts
   trust-store-password: "!q2w3e4r"
   
-errormessage:
-  error_01: error입니다!!!.
+reload:
+  flag: 1
