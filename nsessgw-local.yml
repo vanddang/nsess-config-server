@@ -9,7 +9,6 @@ spring:
       max-total: 20
       pool-prepared-statements: true
 
-
 server:
   port: 8084
   additionalPorts: 8085,8086
@@ -21,6 +20,71 @@ server:
   key-alias: bahn
   trust-store: C:/Users/vanddang/bahn_keystore_ts.ts
   trust-store-password: "!q2w3e4r"
+
+# 값 변경시 gateway에서 10분주기 스케줄로 gatecontext를 reload 한다.  
+gatewayContextReloadFlag: 0
   
-reload:
-  flag: 0
+nsbizmem-service:
+  webroot: /nsbizmem-nsess-web
+  healthCheckUrl: /health
+  ribbon:
+    eureka:
+      enabled: false
+    listOfServers: 127.0.0.1:8081, 127.0.0.1:8082, 127.0.0.1:8083
+    NFLoadBalancerRuleClassName: com.skb.ribbon.AvailabilityBasedServerSelectionRule
+    NFLoadBalancerPingClassName: com.skb.ribbon.NsEssPing
+    ServerListRefreshInterval: 10000
+    ConnectTimeout: 5000
+    ReadTimeout: 10000
+    
+nsbizmem-service-dw:
+  webroot: /nsbizmem-ecgdw-web
+  healthCheckUrl: /health
+  ribbon:
+    eureka:
+      enabled: false
+    listOfServers: 127.0.0.1:8090
+    #NFLoadBalancerRuleClassName: com.skb.ribbon.AvailabilityBasedServerSelectionRule
+    #NFLoadBalancerPingClassName: com.skb.ribbon.NsEssDwPing
+    ServerListRefreshInterval: 10000
+    ConnectTimeout: 5000
+    ReadTimeout: 10000
+    
+nsbizmem-service-certkey:
+  webroot: /nsbizmem-certkey-web
+  healthCheckUrl: /health
+  ribbon:
+    eureka:
+      enabled: false
+    listOfServers: 127.0.0.1:8091
+    #NFLoadBalancerRuleClassName: com.skb.ribbon.AvailabilityBasedServerSelectionRule
+    #NFLoadBalancerPingClassName: com.skb.ribbon.NsEssCertKeyPing
+    ServerListRefreshInterval: 10000
+    ConnectTimeout: 5000
+    ReadTimeout: 10000
+
+zuul:
+  #retryable: false
+  #threadPool : 
+    #useSeparateThreadPools : true
+    #threadPoolKeyPrefix: nsbizmem-service
+  host:
+    max-total-connections: 200
+    max-per-route-connections: 20
+    socket-timeout-millis: 3000
+    connect-timeout-millis: 3000
+  ribbon-isolation-strategy: THREAD
+  ignoredPatterns: /actuator/**
+  routes:
+    nsbizmem-service-dw:
+      path: /SkbmSwMemberNameChange.do, /SkbmSwServiceClose.do, /SkbmSwChangeCharge.do, /SkbmSwTransfer.do, /SkbmSwServicePause.do, /SkbmSwServiceMdnChange.do, /DownloadServlet.do, /EssDownloadServlet.do
+    nsbizmem-service-certkey:
+      path: /skbmNsEssCerKey.do
+    nsbizmem-service:
+      path: /**
+      
+management:
+  endpoints:
+    web:
+      exposure:
+        include: refresh, info, env, health, loggers, metrics, routes, filters  
