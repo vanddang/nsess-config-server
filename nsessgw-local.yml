@@ -31,8 +31,8 @@ nsbizmem-service:
     eureka:
       enabled: false
     listOfServers: 127.0.0.1:8081, 127.0.0.1:8082, 127.0.0.1:8083
-    NFLoadBalancerRuleClassName: com.skb.gw.customize.ribbon.AvailabilityBasedServerSelectionRule
-    NFLoadBalancerPingClassName: com.skb.gw.customize.ribbon.NsEssPing
+    NFLoadBalancerRuleClassName: com.skb.gw.biz.customize.ribbon.AvailabilityBasedServerSelectionRule
+    NFLoadBalancerPingClassName: com.skb.gw.biz.customize.ribbon.NsEssPing
     ServerListRefreshInterval: 10000
     ConnectTimeout: 5000
     ReadTimeout: 10000
@@ -44,8 +44,8 @@ nsbizmem-service-dw:
     eureka:
       enabled: false
     listOfServers: 127.0.0.1:8090
-    #NFLoadBalancerRuleClassName: com.skb.gw.customize.ribbon.AvailabilityBasedServerSelectionRule
-    #NFLoadBalancerPingClassName: com.skb.gw.customize.ribbon.NsEssDwPing
+    #NFLoadBalancerRuleClassName: com.skb.gw.biz.customize.ribbon.AvailabilityBasedServerSelectionRule
+    #NFLoadBalancerPingClassName: com.skb.gw.biz.customize.ribbon.NsEssDwPing
     ServerListRefreshInterval: 10000
     ConnectTimeout: 5000
     ReadTimeout: 10000
@@ -57,8 +57,8 @@ nsbizmem-service-certkey:
     eureka:
       enabled: false
     listOfServers: 127.0.0.1:8091
-    #NFLoadBalancerRuleClassName: com.skb.gw.customize.ribbon.AvailabilityBasedServerSelectionRule
-    #NFLoadBalancerPingClassName: com.skb.gw.customize.ribbon.NsEssCertKeyPing
+    #NFLoadBalancerRuleClassName: com.skb.gw.biz.customize.ribbon.AvailabilityBasedServerSelectionRule
+    #NFLoadBalancerPingClassName: com.skb.gw.biz.customize.ribbon.NsEssCertKeyPing
     ServerListRefreshInterval: 10000
     ConnectTimeout: 5000
     ReadTimeout: 10000
