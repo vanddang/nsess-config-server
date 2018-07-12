@@ -1,3 +1,9 @@
-sample:
-  data:  local server config data
-  data2: sample data 입니다.  
+error:
+  code: 
+    90006: NE-90006
+    90007: NE-90007
+    99999: NE-99999
+  msg:
+    90006: 요청 필수값이 존재하지 않습니다.
+    90007: 정의되지 않은 인터페이스입니다.
+    99999: 시스템 오류입니다 서버측에 문의해주세요.  
