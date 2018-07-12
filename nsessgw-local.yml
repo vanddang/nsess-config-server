@@ -25,7 +25,7 @@ server:
 gatewayContextReloadFlag: 0
   
 nsbizmem-service:
-  webroot: /nsbizmem-nsess-web
+  webRoot: /nsbizmem-nsess-web
   healthCheckUrl: /health
   ribbon:
     eureka:
@@ -38,7 +38,7 @@ nsbizmem-service:
     ReadTimeout: 10000
     
 nsbizmem-service-dw:
-  webroot: /nsbizmem-ecgdw-web
+  webRoot: /nsbizmem-ecgdw-web
   healthCheckUrl: /health
   ribbon:
     eureka:
@@ -51,7 +51,7 @@ nsbizmem-service-dw:
     ReadTimeout: 10000
     
 nsbizmem-service-certkey:
-  webroot: /nsbizmem-certkey-web
+  webRoot: /nsbizmem-certkey-web
   healthCheckUrl: /health
   ribbon:
     eureka:
