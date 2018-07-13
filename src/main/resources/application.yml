@@ -1,11 +1,58 @@
-server:
-  port: 8888
-  
 spring:
   application:
     name: nsess-config-server
+    
+    
+--- #local
+spring:
+  profiles: local
   cloud:
     config:
       server:
         git:
           uri: https://bitbucket.skbroadband.com/scm/dt/nsess-config-server.git
+          #basedir: nsess
+server:
+  port: 8888
+          
+          
+
+--- #dev
+spring:
+  profiles: dev
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://bitbucket.skbroadband.com/scm/dt/nsess-config-server.git
+          #basedir: nsess
+server:
+  port: 8888          
+          
+          
+          
+--- #stg
+spring:
+  profiles: stg
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://bitbucket.skbroadband.com/scm/dt/nsess-config-server.git
+          #basedir: nsess
+server:
+  port: 8888          
+          
+
+          
+--- #prod
+spring:
+  profiles: prod
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://bitbucket.skbroadband.com/scm/dt/nsess-config-server.git
+          #basedir: nsess
+server:
+  port: 8888
