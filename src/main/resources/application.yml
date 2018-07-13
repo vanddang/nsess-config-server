@@ -9,9 +9,10 @@ spring:
     config:
       server:
         git:
-          #uri: https://bitbucket.skbroadband.com/scm/dt/nsess-config-server.git
+          uri: https://abcd
           repos:
-            local: https://bitbucket.skbroadband.com/scm/dt/nsess-config-server.git
+            nsess-gateway/*: https://bitbucket.skbroadband.com/scm/dt/nsess-config-server.git
+            #nsbizmem-nsess-web: https://bitbucket.skbroadband.com/scm/dt/nsess-config-server.git
           searchPaths: nsess/gateway, nsess/nsbizmem            
 server:
   port: 8888
