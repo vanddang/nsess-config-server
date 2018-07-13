@@ -11,7 +11,7 @@ spring:
       server:
         git:
           uri: https://bitbucket.skbroadband.com/scm/dt/nsess-config-server.git
-          searchPaths: nsess *
+          searchPaths: nsess
           #username: bjban@bdinc.co.kr
           #password: a1234567890111
           #basedir: nsess
