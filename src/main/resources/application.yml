@@ -2,7 +2,6 @@ spring:
   application:
     name: nsess-config-server
     
-    
 --- #local
 spring:
   profiles: local
@@ -11,10 +10,9 @@ spring:
       server:
         git:
           #uri: https://bitbucket.skbroadband.com/scm/dt/nsess-config-server.git
-          searchPaths: nsess/gateway, nsess/nsbizmem
           repos:
-            nsess-gateway: https://bitbucket.skbroadband.com/scm/dt/nsess-config-server.git
-            nsbizmem-nsess-web: https://bitbucket.skbroadband.com/scm/dt/nsess-config-server.git
+            local: https://bitbucket.skbroadband.com/scm/dt/nsess-config-server.git
+          searchPaths: nsess/gateway, nsess/nsbizmem            
 server:
   port: 8888
           
