@@ -9,13 +9,17 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/vanddang/nsess-config-server.git
+          uri: https://bitbucket.skbroadband.com/scm/dt/nsess-config-server.git #default repository
           searchPaths: nsess
           repos:
-            nsessgw:
-              pattern: 
-                -*/gateway  
+            nsbizmem:
+              pattern: 'nsbizmem*' #yml file pattern
               uri: https://bitbucket.skbroadband.com/scm/dt/nsess-config-server.git
+              searchPaths: nsbizmem* #yml file directory, *:하위 디렉토리 포함
+            gateway:
+              pattern: 'gateway*'
+              uri: https://github.com/vanddang/nsess-config-server.git
+              searchPaths: gateway*              
 server:
   port: 8888
           
@@ -28,11 +32,15 @@ spring:
     config:
       server:
         git:
-          uri: https://bitbucket.skbroadband.com/scm/dt/nsess-config-server.git
-          searchPaths: nsess/gateway, nsess/nsbizmem
-          #basedir: nsess
+          uri: https://bitbucket.skbroadband.com/scm/dt/nsess-config-server.git #default repository
+          searchPaths: nsess
+          repos:
+            nsess:
+              pattern: 'nsess*' #yml file pattern
+              uri: https://bitbucket.skbroadband.com/scm/dt/nsess-config-server.git
+              searchPaths: nsess* #yml file directory, *:하위 디렉토리 포함
 server:
-  port: 8888          
+  port: 8888     
           
           
           
@@ -43,11 +51,15 @@ spring:
     config:
       server:
         git:
-          uri: https://bitbucket.skbroadband.com/scm/dt/nsess-config-server.git
-          searchPaths: nsess/gateway, nsess/nsbizmem
-          #basedir: nsess
+          uri: https://bitbucket.skbroadband.com/scm/dt/nsess-config-server.git #default repository
+          searchPaths: nsess
+          repos:
+            nsess:
+              pattern: 'nsess*' #yml file pattern
+              uri: https://bitbucket.skbroadband.com/scm/dt/nsess-config-server.git
+              searchPaths: nsess* #yml file directory, *:하위 디렉토리 포함
 server:
-  port: 8888          
+  port: 8888      
           
 
           
@@ -58,8 +70,12 @@ spring:
     config:
       server:
         git:
-          uri: https://bitbucket.skbroadband.com/scm/dt/nsess-config-server.git
-          searchPaths: nsess/gateway, nsess/nsbizmem
-          #basedir: nsess
+          uri: https://bitbucket.skbroadband.com/scm/dt/nsess-config-server.git #default repository
+          searchPaths: nsess
+          repos:
+            nsess:
+              pattern: 'nsess*' #yml file pattern
+              uri: https://bitbucket.skbroadband.com/scm/dt/nsess-config-server.git
+              searchPaths: nsess* #yml file directory, *:하위 디렉토리 포함
 server:
   port: 8888
