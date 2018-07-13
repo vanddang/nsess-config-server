@@ -12,7 +12,6 @@ spring:
 server:
   port: 8084
   additionalPorts: 8085,8086
-  #ssl 인증서
   ssl-port: 8443
   key-store: C:/Users/vanddang/bahn_keystore.jks
   key-store-password: "!q2w3e4r"
@@ -21,7 +20,6 @@ server:
   trust-store: C:/Users/vanddang/bahn_keystore_ts.ts
   trust-store-password: "!q2w3e4r"
 
-# 값 변경시 gateway에서 10분주기 스케줄로 gatecontext를 reload 한다.  
 gatewayContextReloadFlag: 0
   
 nsbizmem-service:
@@ -44,8 +42,8 @@ nsbizmem-service-dw:
     eureka:
       enabled: false
     listOfServers: 127.0.0.1:8090
-    #NFLoadBalancerRuleClassName: com.skb.gw.common.ribbon.AvailabilityBasedServerSelectionRule
-    #NFLoadBalancerPingClassName: com.skb.gw.common.ribbon.NsEssDwPing
+    NFLoadBalancerRuleClassName: com.skb.gw.common.ribbon.AvailabilityBasedServerSelectionRule
+    NFLoadBalancerPingClassName: com.skb.gw.common.ribbon.NsEssDwPing
     ServerListRefreshInterval: 10000
     ConnectTimeout: 5000
     ReadTimeout: 10000
@@ -57,8 +55,8 @@ nsbizmem-service-certkey:
     eureka:
       enabled: false
     listOfServers: 127.0.0.1:8091
-    #NFLoadBalancerRuleClassName: com.skb.gw.common.ribbon.AvailabilityBasedServerSelectionRule
-    #NFLoadBalancerPingClassName: com.skb.gw.common.ribbon.NsEssCertKeyPing
+    NFLoadBalancerRuleClassName: com.skb.gw.common.ribbon.AvailabilityBasedServerSelectionRule
+    NFLoadBalancerPingClassName: com.skb.gw.common.ribbon.NsEssCertKeyPing
     ServerListRefreshInterval: 10000
     ConnectTimeout: 5000
     ReadTimeout: 10000
