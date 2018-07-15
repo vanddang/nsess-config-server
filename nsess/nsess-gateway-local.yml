@@ -64,7 +64,7 @@ zuul:
     socket-timeout-millis: 3000
     connect-timeout-millis: 3000
   ribbon-isolation-strategy: THREAD
-  ignoredPatterns: /actuator/**, /bus/**
+  ignoredPatterns: /actuator/**
   routes:
     nsbizmem-service-dw:
       path: /SkbmSwMemberNameChange.do, /SkbmSwServiceClose.do, /SkbmSwChangeCharge.do, /SkbmSwTransfer.do, /SkbmSwServicePause.do, /SkbmSwServiceMdnChange.do, /DownloadServlet.do, /EssDownloadServlet.do
