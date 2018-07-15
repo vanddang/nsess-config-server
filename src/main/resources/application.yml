@@ -1,7 +1,7 @@
 spring:
   application:
     name: nsess-config-server
-    
+  
 --- #local
 spring:
   profiles: local
@@ -9,12 +9,14 @@ spring:
     config:
       server:
         git:
-          uri: https://aaaa.git #default repository
-          searchPaths: nsess
+          uri: https://bitbucket.skbroadband.com/scm/dt/nsess-config-server.git #default repository
+          searchPaths: '*'
           repos:
             nsess:
-              pattern: 'nsess-*' #yml file pattern
-              uri: https://bitbucket.skbroadband.com/scm/dt/nsess-config-server.git
+              pattern: nsess-* #yml file pattern
+              cloneOnStart: true
+              force-pull: true
+              uri: https://github.com/vanddang/nsess-config-server.git
               searchPaths: nsess* #yml file directory, *:하위 디렉토리 포함
 server:
   port: 8888
@@ -24,17 +26,6 @@ server:
 --- #dev
 spring:
   profiles: dev
-  cloud:
-    config:
-      server:
-        git:
-          uri: https://bitbucket.skbroadband.com/scm/dt/nsess-config-server.git #default repository
-          searchPaths: nsess
-          repos:
-            nsess:
-              pattern: 'nsess*' #yml file pattern
-              uri: https://bitbucket.skbroadband.com/scm/dt/nsess-config-server.git
-              searchPaths: nsess* #yml file directory, *:하위 디렉토리 포함
 server:
   port: 8888     
           
@@ -43,17 +34,6 @@ server:
 --- #stg
 spring:
   profiles: stg
-  cloud:
-    config:
-      server:
-        git:
-          uri: https://bitbucket.skbroadband.com/scm/dt/nsess-config-server.git #default repository
-          searchPaths: nsess
-          repos:
-            nsess:
-              pattern: 'nsess*' #yml file pattern
-              uri: https://bitbucket.skbroadband.com/scm/dt/nsess-config-server.git
-              searchPaths: nsess* #yml file directory, *:하위 디렉토리 포함
 server:
   port: 8888      
           
@@ -62,16 +42,5 @@ server:
 --- #prod
 spring:
   profiles: prod
-  cloud:
-    config:
-      server:
-        git:
-          uri: https://bitbucket.skbroadband.com/scm/dt/nsess-config-server.git #default repository
-          searchPaths: nsess
-          repos:
-            nsess:
-              pattern: 'nsess*' #yml file pattern
-              uri: https://bitbucket.skbroadband.com/scm/dt/nsess-config-server.git
-              searchPaths: nsess* #yml file directory, *:하위 디렉토리 포함
 server:
   port: 8888
