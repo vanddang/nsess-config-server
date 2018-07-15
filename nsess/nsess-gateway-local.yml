@@ -20,11 +20,7 @@ server:
   trust-store: C:/Users/vanddang/bahn_keystore_ts.ts
   trust-store-password: "!q2w3e4r"
 
-gatewayContextReloadFlag: 0
-  
 nsbizmem-service:
-  webRoot: /nsbizmem-nsess-web
-  healthCheckUrl: /health
   ribbon:
     eureka:
       enabled: false
@@ -36,8 +32,6 @@ nsbizmem-service:
     ReadTimeout: 10000
     
 nsbizmem-service-dw:
-  webRoot: /nsbizmem-ecgdw-web
-  healthCheckUrl: /health
   ribbon:
     eureka:
       enabled: false
@@ -49,8 +43,6 @@ nsbizmem-service-dw:
     ReadTimeout: 10000
     
 nsbizmem-service-certkey:
-  webRoot: /nsbizmem-certkey-web
-  healthCheckUrl: /health
   ribbon:
     eureka:
       enabled: false
@@ -86,3 +78,11 @@ management:
     web:
       exposure:
         include: refresh, info, env, health, loggers, metrics, routes, filters  
+        
+gateway:
+  properties:
+    gatewayContextReloadFlag: 0
+    nsbizmemServiceWebRoot: /nsbizmem-nsess-web
+    nsbizmemServiceWebDwRoot: /nsbizmem-ecgdw-web
+    nsbizmemServiceWebCertKeyRoot: /nsbizmem-certkey-web
+    ribbonHealthCheckUrl: /health
