@@ -86,3 +86,4 @@ gateway:
     nsbizmemServiceWebDwRoot: /nsbizmem-ecgdw-web
     nsbizmemServiceWebCertKeyRoot: /nsbizmem-certkey-web
     ribbonHealthCheckUrl: /health
+    sampledata: adfb
