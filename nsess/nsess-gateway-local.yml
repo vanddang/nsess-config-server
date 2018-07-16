@@ -1,8 +1,8 @@
 spring:
   datasource:
     url: jdbc:oracle:thin:@localhost:1521:xe
-    username: scott
-    password: '{cipher}4090c2a0c4644ca6936c3c0b493c858a435480ac2705397a08c496874d18a5db'
+    username: '{cipher}fffb289a3b051259d79b52d1aa5c5aab78430fa6c256d4bb8eeb2cd0146d420d'
+    password: '{cipher}aef44d3c3d506e293d0782f23a7c5507ec89b59e21948de01aa8f5fed579973b'
     driver-class-name: oracle.jdbc.driver.OracleDriver
     dbcp2:
       initial-size: 7
@@ -14,11 +14,11 @@ server:
   additionalPorts: 8085,8086
   ssl-port: 8443
   key-store: C:/Users/vanddang/bahn_keystore.jks
-  key-store-password: "!q2w3e4r"
-  key-password: "!q2w3e4r"
+  key-store-password: '{cipher}af0727ac9c1962037f9858f3b51c56ac3c5accee1e0829b65ba7d78eaa80cd29'
+  key-password: '{cipher}af0727ac9c1962037f9858f3b51c56ac3c5accee1e0829b65ba7d78eaa80cd29'
   key-alias: bahn
   trust-store: C:/Users/vanddang/bahn_keystore_ts.ts
-  trust-store-password: "!q2w3e4r"
+  trust-store-password: '{cipher}af0727ac9c1962037f9858f3b51c56ac3c5accee1e0829b65ba7d78eaa80cd29'
 
 nsbizmem-service:
   ribbon:
