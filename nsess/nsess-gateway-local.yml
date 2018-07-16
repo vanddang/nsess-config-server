@@ -2,7 +2,7 @@ spring:
   datasource:
     url: jdbc:oracle:thin:@localhost:1521:xe
     username: scott
-    password: tiger
+    password: 4090c2a0c4644ca6936c3c0b493c858a435480ac2705397a08c496874d18a5db
     driver-class-name: oracle.jdbc.driver.OracleDriver
     dbcp2:
       initial-size: 7
