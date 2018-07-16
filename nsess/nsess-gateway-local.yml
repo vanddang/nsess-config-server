@@ -24,7 +24,7 @@ nsbizmem-service:
   ribbon:
     eureka:
       enabled: false
-    listOfServers: 127.0.0.1:8081, 127.0.0.1:8082, 127.0.0.1:8083, 127.0.0.1:8084
+    listOfServers: 127.0.0.1:8081, 127.0.0.1:8082, 127.0.0.1:8083, 127.0.0.1:8084, 127.0.0.1:8085
     NFLoadBalancerRuleClassName: com.skb.gw.common.ribbon.AvailabilityBasedServerSelectionRule
     NFLoadBalancerPingClassName: com.skb.gw.common.ribbon.NsEssPing
     ServerListRefreshInterval: 10000
