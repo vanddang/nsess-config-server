@@ -1,7 +1,7 @@
 spring:
   datasource:
     url: jdbc:oracle:thin:@localhost:1521:xe
-    username: '{cipher}fffb289a3b051259d79b52d1aa5c5aab78430fa6c256d4bb8eeb2cd0146d420d'
+    username: scott
     password: '{cipher}aef44d3c3d506e293d0782f23a7c5507ec89b59e21948de01aa8f5fed579973b'
     driver-class-name: oracle.jdbc.driver.OracleDriver
     dbcp2:
