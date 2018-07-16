@@ -18,6 +18,13 @@ spring:
               force-pull: true
               uri: https://github.com/vanddang/nsess-config-server.git
               searchPaths: nsess* #yml file directory, *:하위 디렉토리 포함
+              username: bjban
+              password: a1234567890
+              #ignoreLocalSshSettings: true
+              #hostKey: someHostKey
+              #hostKeyAlgorithm: ssh-rsa
+              #strictHostKeyChecking: true
+              #privateKey: |
 server:
   port: 8888
           
